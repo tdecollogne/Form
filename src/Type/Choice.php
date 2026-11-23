@@ -221,6 +221,8 @@ class Choice extends AbstractType
             );
 
             if (empty($selected)) {
+                // Clear a selection retained from the previous render.
+                $choiceValue->setSelected(false);
                 continue;
             }
 
